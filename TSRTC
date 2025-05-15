@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TSRTC Auto Track</title>
+  <script>
+    function trackLR() {
+      const lrno = "T25434745"; // Put your LR number here
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://tgsrtclogistics.co.in/TSRTC/track.php'; // Hypothetical form action
+
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'lrno';
+      input.value = lrno;
+
+      form.appendChild(input);
+      document.body.appendChild(form);
+      form.submit();
+    }
+    window.onload = trackLR;
+  </script>
+</head>
+<body>
+  <p>Redirecting to TSRTC tracking...</p>
+</body>
+</html>
